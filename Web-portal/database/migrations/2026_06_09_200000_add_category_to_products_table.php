@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->enum('role', ['super_admin', 'admin', 'editor', 'viewer'])->default('viewer')->after('email_verified_at');
+        Schema::table('products', function (Blueprint $table) {
+            $table->enum('category', ['clothes', 'cosmetics', 'electronics'])
+                ->default('clothes')
+                ->after('sku');
         });
     }
 
@@ -21,8 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role');
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('category');
         });
     }
 };

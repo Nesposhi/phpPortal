@@ -146,6 +146,9 @@ export default function UserCreate() {
                                             : 'border-slate-300 focus:border-slate-900 focus:ring-slate-900 dark:border-slate-600 dark:focus:border-slate-600 dark:focus:ring-slate-600'
                                     }`}
                                 >
+                                    <option value="super_admin">
+                                        Super Administrator
+                                    </option>
                                     <option value="admin">Administrator</option>
                                     <option value="editor">Editor</option>
                                     <option value="viewer">Viewer</option>
